@@ -3,9 +3,6 @@ import marked from 'marked'
 import './markdownEditor.css'
 
 class MarkDownEditor extends Component {
-    constructor(props) {
-        super(props)
-    }
     goBottom() {
         this.refs.container.scrollTop = 100000
     }
