@@ -13,7 +13,7 @@ class MarkDownEditor extends Component {
         return (
             <div className={this.props.enableHtml ? 'mark_down_editor html_mode' : 'mark_down_editor'} ref="container">
                 {this.props.enableHtml ?
-                <div dangerouslySetInnerHTML={{__html: this.result()}} />
+                <div className="mark_down_content" dangerouslySetInnerHTML={{__html: this.result()}} />
                 :
                 <pre>
                     {this.result()}

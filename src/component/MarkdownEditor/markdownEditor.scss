@@ -1,13 +1,19 @@
 .html_mode {
-    animation: flip 2s;
-}
-
-@keyframes flip {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
+    transform: rotateX(180deg);
+    a {
+        color: #ddd;
     }
 }
+
+.mark_down_editor {
+    top: -100%;
+}
+// @keyframes flip {
+//     from {
+//         transform: rotateX(0deg);
+//     }
+
+//     to {
+//         transform: rotateX(180deg);
+//     }
+// }

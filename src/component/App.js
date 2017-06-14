@@ -8,7 +8,7 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            interval: 50,
+            interval: 10,
             currentStyle: '',
             enableHtml: false,
             fullStyle: [
@@ -22,12 +22,12 @@ class App extends Component {
 
 /* 首先给所有元素加上过渡效果 */
 * {
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 /* 白色背景太单调了，我们来点背景 */
 html {
-    color: rgb(222,222,222); background: rgb(0,43,54); 
+    color: rgb(222,222,222); background: rgb(63, 82, 99);; 
 }
 /* 文字离边框太近了 */
 .style_editor {
@@ -35,11 +35,13 @@ html {
     border: 1px solid;
     margin: .5em;
     overflow: auto;
-    width: 45vw; height: 90vh;
+    width: 49%;
+    max-height: 44.6%;
+    box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.3);
 }
 /* 代码高亮 */
-.token.selector{ color: rgb(133,153,0); }
-.token.property{ color: rgb(187,137,0); }
+.token.selector{ color: #E69F0F; }
+.token.property{ color: #64D5EA; }
 .token.punctuation{ color: yellow; }
 .token.function{ color: rgb(42,161,152); }
 
@@ -51,23 +53,26 @@ html{
 .style_editor {
     position: absolute;
     left: 0;
-    top: 0; 
-    -webkit-transition: none; 
-    transition: none;
-    -webkit-transform: rotateY(10deg) translateZ(-100px) ;
-            transform: rotateY(10deg) translateZ(-100px) ;
+    top: 0;
+    -webkit-transform: translateX(98.5%) translateZ(-100px) rotateY(-10deg);
+            transform: translateX(98.5%) translateZ(-100px) rotateY(-10deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    max-height: 94.5%;
 }
 
 /* 接下来我给自己准备一个编辑器 */
 .mark_down_editor{
-    position: absolute; 
-    right: 0;
+    position: absolute;
+    width: 49%; height: 95%;
+    left: 0;
     top: 0;
     padding: .5em;  margin: .5em;
-    width: 48vw; height: 90vh; 
     border: 1px solid;
-    background: white; color: #222;
+    color: #ddd;
     overflow: auto;
+    -webkit-transform: rotateY(10deg) translateZ(-100px);
+            transform: rotateY(10deg) translateZ(-100px);
 }
 /* 好了，我开始写简历了 */
 
@@ -83,8 +88,6 @@ html{
                 `
 /* 再对 HTML 加点样式 */
 .mark_down_editor{
-    -webkit-transform: rotateY(-10deg) translateZ(-100px) ;
-            transform: rotateY(-10deg) translateZ(-100px) ;
     padding: 2em;
 }
 .mark_down_editor h2{
