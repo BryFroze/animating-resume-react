@@ -8,7 +8,7 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            interval: 10,
+            interval: 50,
             currentStyle: '',
             enableHtml: false,
             fullStyle: [
