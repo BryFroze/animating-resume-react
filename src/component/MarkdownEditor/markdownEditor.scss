@@ -1,19 +1,19 @@
-.html_mode {
-    transform: rotateX(180deg);
+.mark_down_editor.html_mode {
+    transform: rotateX(180deg) rotateY(-10deg) translateZ(100px);
+    transform-origin: left;
     a {
         color: #ddd;
     }
 }
-
-.mark_down_editor {
-    top: -100%;
+.mark_down_content {
+    transform: rotateX(-180deg);
 }
-// @keyframes flip {
-//     from {
-//         transform: rotateX(0deg);
-//     }
+@keyframes slideInTop {
+    from {
+        top: -500px;
+    }
 
-//     to {
-//         transform: rotateX(180deg);
-//     }
-// }
+    to {
+        top: 0;
+    }
+}

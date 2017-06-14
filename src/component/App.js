@@ -8,7 +8,7 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            interval: 50,
+            interval: 10,
             currentStyle: '',
             enableHtml: false,
             fullStyle: [
@@ -27,7 +27,8 @@ class App extends Component {
 }
 /* 白色背景太单调了，我们来点背景 */
 html {
-    color: rgb(222,222,222); background: rgb(63, 82, 99);; 
+    color: rgb(222,222,222);
+    background: rgb(63, 82, 99);
 }
 /* 文字离边框太近了 */
 .style_editor {
@@ -36,7 +37,7 @@ html {
     margin: .5em;
     overflow: auto;
     width: 49%;
-    max-height: 44.6%;
+    max-height: 94.5%;
     box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.3);
 }
 /* 代码高亮 */
@@ -64,15 +65,22 @@ html{
 /* 接下来我给自己准备一个编辑器 */
 .mark_down_editor{
     position: absolute;
-    width: 49%; height: 95%;
     left: 0;
-    top: 0;
-    padding: .5em;  margin: .5em;
+    top: -100%;
+    padding: .5em;
+    margin: .5em;
     border: 1px solid;
     color: #ddd;
     overflow: auto;
+}
+.mark_down_editor{
+    width: 49%;
+    height: 95%;
+    top: 0;
     -webkit-transform: rotateY(10deg) translateZ(-100px);
             transform: rotateY(10deg) translateZ(-100px);
+    -webkit-transform-origin: left;
+            transform-origin: left;
 }
 /* 好了，我开始写简历了 */
 

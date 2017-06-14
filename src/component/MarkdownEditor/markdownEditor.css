@@ -1,7 +1,14 @@
-.html_mode {
-  transform: rotateX(180deg); }
-  .html_mode a {
+.mark_down_editor.html_mode {
+  transform: rotateX(180deg) rotateY(-10deg) translateZ(100px);
+  transform-origin: left; }
+  .mark_down_editor.html_mode a {
     color: #ddd; }
 
-.mark_down_editor {
-  top: -100%; }
+.mark_down_content {
+  transform: rotateX(-180deg); }
+
+@keyframes slideInTop {
+  from {
+    top: -500px; }
+  to {
+    top: 0; } }
