@@ -1,5 +1,7 @@
 ### React版会动的简历
 
+## [预览](https://frozenbyzz.github.io/animating-resume-react/)
+
 ### install setup
 
 ### 安装依赖
