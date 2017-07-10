@@ -16,8 +16,8 @@ class App extends Component {
 * Inspired by http://strml.net/
 * 参考于 https://jirengu-inc.github.io/animating-resume/dist/
 * 大家好，我是ShowTime
-* 作为一个前端工程师，就是折腾，就是浪。
-* 今天我们来写一份简历
+* 一个编程路上的小学生。
+* 今天我们来写一份酷炫的简历吧
 */
 
 /* 首先给所有元素加上过渡效果 */
@@ -133,7 +133,7 @@ html{
 技能
 ----
 
-* 前端开发
+* JS
 * Vue.js
 * React.js
 * Node.js 努力学习中
@@ -150,7 +150,6 @@ html{
 ----
 
 * [GitHub](https://github.com/FrozenByzz)
-* [原作者](https://jirengu-inc.github.io/animating-resume/dist/)
 
 说明
 ----
