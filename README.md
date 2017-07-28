@@ -1,6 +1,6 @@
 ### React版会动的简历
 
-# [预览](https://by2z.cn/animate-react-resume)
+# [预览](http://by2z.cn/animate-react-resume)
 
 ### install setup
 
