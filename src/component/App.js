@@ -7,6 +7,8 @@ import MarkDownEditor from './MarkdownEditor/MarkDownEditor'
 class App extends Component {
     constructor() {
         super()
+        this.styleEditor = null
+        this.markdownEditor = null
         this.state = {
             interval: 50,
             currentStyle: '',
@@ -204,8 +206,8 @@ html{
                             currentStyle: prev.currentStyle+=char
                         }
                     })
-                    if (style.substring(l - 1, l) === '\n' && this.refs.styleEditor) {
-                        this.refs.styleEditor.goBottom()
+                    if (style.substring(l - 1, l) === '\n' && this.styleEditor) {
+                        this.styleEditor.goBottom()
                     }
                     setTimeout(showStyle, interval)
                 } else {
@@ -227,8 +229,8 @@ html{
                         }
                     })
                     let prevChar = this.state.currentMarkdown[this.state.currentMarkdown.length - 2]
-                    if (prevChar === '\n' && this.refs.markdownEditor) {
-                        this.refs.markdownEditor.goBottom()
+                    if (prevChar === '\n' && this.markdownEditor) {
+                        this.markdownEditor.goBottom()
                     }
                     setTimeout(showResume, interval);
                 } else {
@@ -241,8 +243,8 @@ html{
     render() {
         return (
             <div id="app">
-                <StyleEditor code={this.state.currentStyle} ref="styleEditor" />
-                <MarkDownEditor markdown={this.state.currentMarkdown} enableHtml={this.state.enableHtml} ref="markdownEditor" />
+                <StyleEditor code={this.state.currentStyle} ref={el => this.styleEditor = el} />
+                <MarkDownEditor markdown={this.state.currentMarkdown} enableHtml={this.state.enableHtml} ref={el => this.markdownEditor = el} />
             </div>
         )
     }
